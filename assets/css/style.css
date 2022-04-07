@@ -78,6 +78,29 @@ body::after {
     padding: 20px 20px;
 }
 
+.modal h2 {
+    font-size: 4rem;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.modal p {
+    font-size: 1.5rem;
+}
+
+#img-about-me{
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    float: left;
+    padding: 10px;
+}
+.fa-xmark {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
 .hide{
     display: none;
 }
@@ -104,4 +127,15 @@ body::after {
     .fa-brands {
         font-size: 3rem;
     }
+
+    #img-about-me{
+        float: none;
+        margin: 0 auto;
+    }
+    
+    .modal {
+        width: 90%;
+        height: 90%;
+    }
+
 }
