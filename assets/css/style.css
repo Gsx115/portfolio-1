@@ -25,12 +25,13 @@ body::after {
   }
 
 #container {
-    width: 90%;
+    width: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5rem;
 }
 
 #logo {
@@ -40,19 +41,52 @@ body::after {
 
 .nav {
     display: block;
-    width: 50%;
-    margin: 1rem 0;
+    width: 60%;
 }
 
 .nav-list {
     display: flex;
     justify-content: space-around;
     font-family: 'Smooch Sans', sans-serif;
-    font-size: 4rem;
+    font-size: 5rem;
     font-weight: 600;
+}
+
+.fa-brands {
+    font-size: 5rem;
+}
+
+.nav-social {
+    display: flex;
+    justify-content: center;
 }
 
 .social-list {
     display: flex;
-    justify-content: space-evenly;
+    flex-basis: 50%;
+    justify-content: space-between;
+}
+
+@media screen and (max-width: 670px){
+    .nav {
+        width: 100%;
+    }
+
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+    }
+
+    .social-list {
+        flex-basis: 100%;
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        justify-content: space-around;
+    }    
+
+    .fa-brands {
+        font-size: 3rem;
+    }
 }
