@@ -74,7 +74,7 @@ body::after {
     width: 70%;
     height: 80%;
     background-color: rgba(0, 0, 0, .9);
-    border-radius: 50px;
+    border-radius: 30px;
     color: #fff;
     padding: 20px 20px;
     opacity: 1;
@@ -94,13 +94,14 @@ body::after {
     width: 200px;
     height: 200px;
     border-radius: 100px;
-    float: left;
     padding: 10px;
+    margin: 0 auto;
 }
+
 .fa-xmark {
     position: absolute;
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 15px;
 }
 
 .hide{
@@ -114,6 +115,10 @@ body::after {
 
 .transition {
     transition: opacity .5s ease;
+}
+
+.blur {
+    filter: blur(.75rem);
 }
 
 @media screen and (max-width: 670px){
@@ -137,11 +142,6 @@ body::after {
 
     .fa-brands {
         font-size: 3rem;
-    }
-
-    #img-about-me{
-        float: none;
-        margin: 0 auto;
     }
     
     .modal {

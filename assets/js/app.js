@@ -1,24 +1,35 @@
+const body = document.querySelector('body');
 const modalAboutMe = document.querySelector("#modal-about-me");
+const container = document.querySelector('#container');
 
 function initEventListeners(){
-    document.querySelector('#link-about-me').addEventListener('click',(e)=>{
-        modalAboutMe.classList.toggle('transition');
-        modalAboutMe.clientWidth;
-        modalAboutMe.classList.toggle('hide');
-        e.preventDefault();
-    });
+    // document.querySelector('#link-about-me').addEventListener('click',(e)=>{
+    //     // toggleModal();
+    //     e.preventDefault();
+    // });
 
-    modalAboutMe.addEventListener('click',(e)=>{
-        modalAboutMe.classList.toggle('hide');
+    body.addEventListener('click',(e)=>{
+        let idList=['link-about-me','link-portfolio','link-contact'];
+        if(idList.includes(e.target.id)){
+            toggleModal();
+            e.preventDefault();
+        }
+        else if(!modalAboutMe.classList.contains('hide')){
+            toggleModal();
+        }
     });
 
     modalAboutMe.addEventListener('transitionend', (e)=>{
-        console.log('done');
         modalAboutMe.classList.remove('transition');
     });
 }
 
-
+function toggleModal(){
+    modalAboutMe.classList.toggle('transition');
+    modalAboutMe.clientWidth;
+    modalAboutMe.classList.toggle('hide');
+    container.classList.toggle('blur');
+}
 
 initEventListeners();
 
