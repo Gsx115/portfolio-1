@@ -1,3 +1,14 @@
+/*
+  Document Styles
+
+  Light Blue - 1481ba
+  Dark Blue - 011936
+  Gray - bfbdc1
+  Orange - ff9533
+  White - fbfffe
+
+*/
+
 html {
     font-size: 10px;
 }
@@ -47,8 +58,8 @@ body::after {
 .nav-list {
     display: flex;
     justify-content: space-around;
-    font-family: 'Smooch Sans', sans-serif;
     font-size: 5rem;
+    font-family: 'Smooch Sans', sans-serif;
     font-weight: 600;
 }
 
@@ -73,21 +84,37 @@ body::after {
     position: fixed;
     width: 70%;
     height: 80%;
-    background-color: rgba(0, 0, 0, .9);
+    background-color: rgba(1,25,54,.9);
     border-radius: 30px;
-    color: #fff;
+    color: #fbfffe;
     padding: 20px 20px;
     opacity: 1;
 }
 
 .modal h2 {
-    font-size: 4rem;
+    font-family: teko, "Smooch Sans",sans-serif;
+    font-size: 4.5rem;
+    font-weight: 600;
     text-align: center;
-    padding-bottom: 10px;
+    margin-bottom: 10px;
+    color: #1481ba;
 }
 
-.modal p {
-    font-size: 1.5rem;
+.modal h3 {
+    font-family: teko, "Smooch Sans", sans-serif;
+    font-size: 4rem;
+    font-weight: 400;
+    color: #bfbdc1;
+    border-bottom: 1px solid #ff9533;
+    width: max-content;
+    margin: 5px 0;
+}
+
+.modal p, ul{
+    font-family: mukta, teko, "Smooch Sans", sans-serif;
+    font-size: 1.75rem;
+    padding: 5px 0;
+    line-height: 2.5rem;
 }
 
 #img-about-me{
@@ -96,6 +123,7 @@ body::after {
     border-radius: 100px;
     padding: 10px;
     margin: 0 auto;
+    border: 1px solid #fbfffe;
 }
 
 .fa-xmark {
@@ -119,6 +147,14 @@ body::after {
 
 .blur {
     filter: blur(.75rem);
+}
+
+.link{
+    color: #011936;
+}
+
+.link:hover {
+    color: #ff9533;
 }
 
 @media screen and (max-width: 670px){
