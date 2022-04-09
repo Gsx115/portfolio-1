@@ -165,7 +165,7 @@ body::after {
     .nav-list {
         flex-direction: column;
         align-items: center;
-        gap: 2rem;
+        gap: 5rem;
     }
 
     .social-list {
