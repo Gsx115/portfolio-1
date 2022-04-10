@@ -1,26 +1,24 @@
 const body = document.querySelector('body');
-const modalAboutMe = document.querySelector("#modal-about-me");
 const container = document.querySelector('#container');
 const expUL = document.querySelector('#experience');
+const modalList = document.querySelectorAll('.modal');
 
 function initEventListeners(){
     body.addEventListener('click',(e)=>{
-        let idList=['link-about-me','link-portfolio','link-contact'];
+        modalList.forEach((modal)=>{
+            if(!modal.classList.contains('hide')){
+                toggleModal(modal);
+            }
+        });
+        
+        let idList=['link-about-me','link-portfolio','link-services','link-contact'];
         if(idList.includes(e.target.id)){
-            toggleModal();
+            targetModal = `#modal-${e.target.id.slice(5)}`;
+            toggleModal(document.querySelector(targetModal));
             e.preventDefault();
             highlightExp();
         }
-        else if(!modalAboutMe.classList.contains('hide')){
-            toggleModal();
-        }
-    });
-
-
-
-
-    modalAboutMe.addEventListener('transitionend', (e)=>{
-        modalAboutMe.classList.remove('transition');
+        
     });
 
     function highlightExp() {
@@ -33,11 +31,15 @@ function initEventListeners(){
     }
 }
 
-function toggleModal(){
-    modalAboutMe.classList.toggle('transition');
-    modalAboutMe.clientWidth;
-    modalAboutMe.classList.toggle('hide');
+function toggleModal(modal){
+    modal.classList.toggle('transition');
+    modal.clientWidth;
+    modal.classList.toggle('hide');
     container.classList.toggle('blur');
+
+    modal.addEventListener('transitionend', (e)=>{
+        modal.classList.remove('transition');
+    });
 }
 
 initEventListeners();
