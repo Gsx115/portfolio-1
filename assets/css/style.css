@@ -9,6 +9,10 @@
 
 */
 
+* {
+    box-sizing: border-box;
+}
+
 /* BASE STYLES */
 
 html {
@@ -107,16 +111,27 @@ body::after {
     font-weight: 400;
     color: #bfbdc1;
     border-bottom: 1px solid #ff9533;
-    width: max-content;
+    width: 50%;
     margin: 5px 0;
 }
 
-.modal p, ul{
+.modal ul h5 {
+    width: 100%;
+    color: #bfbdc1;
+    font-size: 2rem;
+}
+
+.modal p {
     font-family: Montserrat, teko, "Smooch Sans", sans-serif;
     font-weight: 300;
-    font-size: 1.75rem;
+    font-size: 1.6rem;
     padding: 5px 0;
     line-height: 3rem;
+}
+
+.modal ul p {
+    text-indent: 1.5rem;
+    margin-bottom: .5rem;
 }
 
 .hide{

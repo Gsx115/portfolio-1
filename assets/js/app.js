@@ -26,7 +26,7 @@ function initEventListeners(){
     function highlightExp() {
         let lis = Array.from(expUL.children);
         lis.forEach((li)=>{
-            let strArray = li.textContent.split('-');
+            let strArray = li.innerHTML.split('-');
             let highlightTxt = '<span class="highlight"> &mdash; </span>';
             li.innerHTML = strArray.join(highlightTxt);
         })
