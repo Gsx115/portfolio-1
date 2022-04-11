@@ -1,6 +1,6 @@
 const body = document.querySelector('body');
 const container = document.querySelector('#container');
-const expUL = document.querySelector('#experience');
+const expUL = document.querySelector('#exp-list');
 const modalList = document.querySelectorAll('.modal');
 
 // Initialize Event Listeners
